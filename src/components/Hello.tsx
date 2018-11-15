@@ -81,6 +81,12 @@ class Hello extends React.Component<Props> {
         console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 
+        function identity<T>(arg: T): T {       //泛型
+            return arg;
+        }
+        let output = identity("myString"); 
+        console.log("output:",output)
+
         return (
             <div className="hello">
                 <div className="greeting">
